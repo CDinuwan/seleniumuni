@@ -37,6 +37,36 @@ public class HomePage {
         return new AlertsPage(driver);
     }
 
+    public FileUploadPage clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+
+    public WysiwygEditorPage clickWysiwygEditor(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
+    public DynamicLoginPage clickDynamicLoading(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoginPage(driver);
+    }
+
+    public LargeAndDeepDomPage clickLargeAndDeepDom(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Large & Deep DOM");
+        return new InfiniteScrollPage(driver);
+    }
+
+    public MultipleWindowsPage clickMultipleWindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
     private void clickLink(String linkTest){
         driver.findElement(By.linkText(linkTest)).click();
     }
